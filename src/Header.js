@@ -10,7 +10,8 @@ import {
     Link
   } from 'react-router-dom';
 
-function Header({ cartItems }) {
+
+function Header({ cartItems, user, signOut }) {
 
     const getCount = () => {
         let count = 0;
@@ -48,8 +49,9 @@ function Header({ cartItems }) {
         </HeaderSearch>
 
         <HeaderNavItems>
-            <HeaderOption>
-                <OptionLineOne>Hello, Carlos</OptionLineOne>
+
+            <HeaderOption onClick={signOut}>
+                <OptionLineOne>Hello, {user.name}</OptionLineOne>
                 <OptionLineTwo>Accout & Lists</OptionLineTwo>
             </HeaderOption>
             <HeaderOption>
@@ -139,6 +141,7 @@ const HeaderSearchIconContainer = styled.div`
 const HeaderOption = styled.div`
 // Trouble
     padding: 10px 9px 10px 9px;
+    cursor: pointer;
  
 `;
 
