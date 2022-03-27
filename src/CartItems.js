@@ -27,7 +27,7 @@ export default CartItems;
 const Container = styled.div`
     
     background-color: white;
-    flex: 0.8;
+    flex: 0.7;
     margin-right: 18px;
     padding: 20px;
 `;

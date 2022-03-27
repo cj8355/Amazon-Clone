@@ -35,7 +35,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Header />
+      <Header cartItems={cartItems} />
       <Routes>
        
           <Route exact path="/cart" element={<Cart cartItems={cartItems} />}/>
